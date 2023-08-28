@@ -1,6 +1,6 @@
 <script>
 
-import {store} from "./store.js";
+import {store, fetchData} from "./store.js";
 
 export default {
 
@@ -19,8 +19,9 @@ export default {
 
   },
 
-  mounted() {
+  mounted () {
 
+      fetchData ()
 
   }
 

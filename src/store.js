@@ -13,9 +13,13 @@ export const store = reactive ({
 
 export function fetchData () {
 
-    const url = `"https://api.themoviedb.org/3/search/movie?api_key=${store.APIKey}&query=${store.searchText}"`;
+    const url = `"https://api.themoviedb.org/3/search/movie?api_key=${store.APIKey}&query=ritorno+al+futuro"`;
+
+    console.log(url)
 
     axios.get(url).then((response) => {
+
+        console.log(response.results)
 
         store.dataArray = response.results;
 
