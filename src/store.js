@@ -19,6 +19,28 @@ export function fetchData () {
 
         store.dataArray = response.data.results;
 
+        console.log(store.dataArray)
+
     })
+
+}
+
+export function flagGenerator (movieLanguage) {
+
+    if (movieLanguage === "en") {
+
+        movieLanguage = "us";
+
+    } else if (movieLanguage === "ja") {
+
+        movieLanguage = "jp";
+
+    } else if (movieLanguage === "zh") {
+
+        movieLanguage = "cn";
+
+    }
+
+    return movieLanguage.toUpperCase();
 
 }
