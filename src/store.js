@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const store = reactive ({
 
-    searchText : "ritorno al futuro",
+    searchText : "",
 
     APIKey : "5ea59b65da75b65f5a104b18d69a4be5",
 
@@ -18,8 +18,6 @@ export function fetchData () {
     axios.get(url).then((response) => {
 
         store.dataArray = response.data.results;
-
-        console.log(store.dataArray);
 
     })
 

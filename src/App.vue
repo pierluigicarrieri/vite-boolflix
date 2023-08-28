@@ -16,12 +16,11 @@ export default {
 
   methods: {
 
+    fetchData
 
   },
 
   mounted () {
-
-      fetchData ()
 
   }
 
@@ -33,12 +32,13 @@ export default {
 
 <div class="container">
 
-  <form class="d-flex" role="search">
+  <div class="input-group d-flex">
 
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="store.searchText">
-    <button class="btn btn-outline-success">Search</button>
+    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search"
+    v-model="store.searchText">
+    <button class="btn btn-outline-success" v-on:click="fetchData">Search</button>
 
-  </form>
+  </div>
 
   <ul v-for="movie in store.dataArray">
     <li>
@@ -50,7 +50,6 @@ export default {
         </div>
     </li>
   </ul>
-
 
 </div>
 
