@@ -35,8 +35,8 @@ export default {
   <div class="input-group d-flex">
 
     <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search"
-    v-model="store.searchText">
-    <button class="btn btn-outline-success" v-on:click="fetchData">Search</button>
+    v-model="store.searchText" @keyup.enter="fetchData">
+    <button class="btn btn-outline-success" @click="fetchData">Search</button>
 
   </div>
 
