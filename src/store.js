@@ -39,6 +39,10 @@ export function flagGenerator (movieLanguage) {
 
         movieLanguage = "cn";
 
+    } else if (movieLanguage === "da") {
+
+        movieLanguage = "dk";
+
     }
 
     return movieLanguage.toUpperCase();
