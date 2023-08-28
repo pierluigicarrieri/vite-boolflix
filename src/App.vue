@@ -40,13 +40,13 @@ export default {
 
   </form>
 
-  <ul>
+  <ul v-for="movie in store.dataArray">
     <li>
         <div id="info-container">
-          <div id="title-container">aaa</div>
-          <div id="original-title-container">bbb</div>
-          <div id="language-container">ccc</div>
-          <div id="vote-container">ddd</div>
+          <div id="title-container">{{ movie.title }}</div>
+          <div id="original-title-container">{{ movie.original_title }}</div>
+          <div id="language-container">{{ movie.original_language }}</div>
+          <div id="vote-container">{{ movie.vote_average }}</div>
         </div>
     </li>
   </ul>
