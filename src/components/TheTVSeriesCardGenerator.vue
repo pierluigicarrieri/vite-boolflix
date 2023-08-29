@@ -34,6 +34,7 @@ export default {
 <template>
 
     <div id="info-container" class="card h-100 rounded-0">
+        <img :src="`https://image.tmdb.org/t/p/w154${series.poster_path}`" alt="">
         <div id="title-container" class="card-text">{{ series.name }}</div>
         <div id="original-title-container" class="card-text">{{ series.original_name }}</div>
         <div id="language-container" class="card-text">
@@ -51,5 +52,7 @@ export default {
 <style lang="scss" scoped>
 
 </style>
+
+<!-- https://www.themoviedb.org/talk/53c11d4ec3a3684cf4006400 -->
 
 <!-- https://github.com/craigh411/vue-star-rating -->
