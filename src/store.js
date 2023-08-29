@@ -47,6 +47,10 @@ export function clearData() {
 
 export function flagGenerator(movieLanguage) {
 
+    if (Array.isArray(movieLanguage)) {
+        movieLanguage = movieLanguage[0];
+    }
+
     if (movieLanguage === "en") {
         movieLanguage = "us";
     } else if (movieLanguage === "ja") {

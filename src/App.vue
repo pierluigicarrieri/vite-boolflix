@@ -56,18 +56,18 @@ export default {
     </li>
   </ul>
 
-  <!-- <ul v-for="movie in store.movieDataArray">
+  <ul v-for="TVSeries in store.TVDataArray">
     <li>
         <div id="info-container">
-          <div id="title-container">{{ movie.title }}</div>
-          <div id="original-title-container">{{ movie.original_title }}</div>
+          <div id="title-container">{{ TVSeries.name }}</div>
+          <div id="original-title-container">{{ TVSeries.original_name }}</div>
           <div id="language-container">
-            <img :src="`https://flagsapi.com/${flagGenerator(movie.original_language)}/flat/64.png`" :alt="`${movie.original_language}`">
+            <img :src="`https://flagsapi.com/${flagGenerator(TVSeries.origin_country)}/flat/64.png`" :alt="`${TVSeries.origin_country}`">
           </div>  
-          <div id="vote-container">{{ movie.vote_average }}</div>
+          <div id="vote-container">{{ TVSeries.vote_average }}</div>
         </div>
     </li>
-  </ul> -->
+  </ul>
 
 </div>
 
