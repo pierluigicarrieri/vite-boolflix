@@ -1,6 +1,6 @@
 <script>
 
-import {store, fetchData, clearData, flagGenerator} from "./store.js";
+import {store, fetchData, fetchTvSeriesData, clearData, flagGenerator} from "./store.js";
 
 export default {
 
@@ -20,6 +20,7 @@ export default {
   methods: {
 
     fetchData,
+    fetchTvSeriesData,
     clearData,
     flagGenerator,
 
@@ -43,7 +44,7 @@ export default {
     <button class="btn btn-outline-danger" @click="clearData">Clear</button>
   </div>
 
-  <ul v-for="movie in store.dataArray">
+  <ul v-for="movie in store.movieDataArray">
     <li>
         <div id="info-container">
           <div id="title-container">{{ movie.title }}</div>
