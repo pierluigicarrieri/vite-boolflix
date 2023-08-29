@@ -5,26 +5,27 @@ import {store, fetchData, flagGenerator} from "./store.js";
 export default {
 
   components:{
-
   },
 
   data() {
+
     return {
+
       store,
+
     }
+
   },
 
   methods: {
 
     fetchData,
-
     flagGenerator,
-
+    
   },
 
   mounted() {
-
-  }
+  },
 
 }
 
