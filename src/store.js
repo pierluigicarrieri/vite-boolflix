@@ -1,7 +1,7 @@
 import {reactive} from "vue";
 import axios from "axios";
 
-export const store = reactive ({
+export const store = reactive({
 
     searchText : "",
 
@@ -11,7 +11,7 @@ export const store = reactive ({
 
 });
 
-export function fetchData () {
+export function fetchData() {
 
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${store.APIKey}&query=${store.searchText}&language=it`;
 
@@ -25,7 +25,19 @@ export function fetchData () {
 
 }
 
-export function flagGenerator (movieLanguage) {
+export function fetchMovieData() {
+
+}
+
+export function fetchTvSeriesData() {
+
+}
+
+export function clearData() {
+
+}
+
+export function flagGenerator(movieLanguage) {
 
     if (movieLanguage === "en") {
 

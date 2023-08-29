@@ -22,7 +22,7 @@ export default {
 
   },
 
-  mounted () {
+  mounted() {
 
   }
 
@@ -39,6 +39,7 @@ export default {
     <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search"
     v-model="store.searchText" @keyup.enter="fetchData">
     <button class="btn btn-outline-success" @click="fetchData">Search</button>
+    <button class="btn btn-outline-danger" @click="">Clear</button>
 
   </div>
 
