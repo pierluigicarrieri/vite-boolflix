@@ -36,18 +36,18 @@
 
     <div class="card h-100 rounded-0 bg-dark text-light">
         <img class="poster" :src="`${fetchImages(movie.poster_path)}`" alt="">
-        <div class="info-container">
-            <div class="title-container card-text">{{ movie.title }}</div>
-            <div class="original-title-container card-text">{{ movie.original_title }}</div>
-            <div class="language-container card-text">
+        <div class="info-container p-2">
+            <div class="title-container card-text py-1">Titolo: {{ movie.title }}</div>
+            <div class="original-title-container card-text py-1">Titolo originale: {{ movie.original_title }}</div>
+            <div class="language-container card-text py-1">Lingua: 
                 <img :src="`https://flagsapi.com/${flagGenerator(movie.original_language)}/flat/64.png`" :alt="`${movie.original_language}`">
             </div>  
-            <div class="vote-container card-text">
+            <div class="vote-container card-text py-1">Voto:
                 <StarRating 
-                star-size="15" read-only="true" :rating="`${starsSetter(parseInt(movie.vote_average))}`" 
+                star-size="15" read-only="true" inline="true" :rating="`${starsSetter(parseInt(movie.vote_average))}`" 
                 ></StarRating>
             </div>
-            <div class="overview-container">{{ movie.overview }}</div>
+            <div class="overview-container py-1">Overview: {{ movie.overview }}</div>
         </div>
     </div>
 
