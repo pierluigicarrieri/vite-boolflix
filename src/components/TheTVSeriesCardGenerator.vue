@@ -39,7 +39,6 @@ export default {
         <div id="language-container" class="card-text">
             <img :src="`https://flagsapi.com/${flagGenerator(series.origin_country)}/flat/64.png`" :alt="`${series.origin_country}`">
         </div>  
-        <div id="vote-container" class="card-text">{{ series.vote_average }}</div>
         <div id="vote-container" class="card-text">
             <StarRating 
             star-size="15" read-only="true" :rating="`${starsSetter(parseInt(series.vote_average))}`" 

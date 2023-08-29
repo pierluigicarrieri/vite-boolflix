@@ -61,7 +61,7 @@ export function flagGenerator(movieLanguage) {
         movieLanguage = "dk";
     } else if (movieLanguage === "ar") {
         movieLanguage = "sa";
-    } else if (movieLanguage === "hi") {
+    } else if (movieLanguage === "hi" || movieLanguage === "te" || movieLanguage === "ta") {
         movieLanguage = "in";
     }
     return movieLanguage.toUpperCase();
