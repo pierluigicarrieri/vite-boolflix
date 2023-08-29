@@ -38,7 +38,11 @@
 body {
   min-height: 100vh;
 
-    .card {
+  h2 {
+    font-size: 3rem;
+  }
+
+  .card {
       position: relative;
   }
   .poster {
