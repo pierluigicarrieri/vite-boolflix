@@ -1,6 +1,6 @@
 <script>
 
-import {store, fetchData, flagGenerator} from "./store.js";
+import {store, fetchData, clearData, flagGenerator} from "./store.js";
 
 export default {
 
@@ -20,8 +20,9 @@ export default {
   methods: {
 
     fetchData,
+    clearData,
     flagGenerator,
-    
+
   },
 
   mounted() {
@@ -35,13 +36,11 @@ export default {
 
 <div class="container">
 
-  <div class="input-group d-flex">
-
+  <div class="input-group d-flex w-50">
     <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search"
     v-model="store.searchText" @keyup.enter="fetchData">
     <button class="btn btn-outline-success" @click="fetchData">Search</button>
-    <button class="btn btn-outline-danger" @click="">Clear</button>
-
+    <button class="btn btn-outline-danger" @click="clearData">Clear</button>
   </div>
 
   <ul v-for="movie in store.dataArray">

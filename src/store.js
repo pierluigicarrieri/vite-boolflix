@@ -6,7 +6,7 @@ export const store = reactive({
     searchText : "",
     APIKey : "5ea59b65da75b65f5a104b18d69a4be5",
     dataArray : [],
-    
+
 });
 
 export function fetchData() {
@@ -26,6 +26,10 @@ export function fetchTvSeriesData() {
 }
 
 export function clearData() {
+
+    store.searchText = "";
+    store.dataArray = [];
+
 }
 
 export function flagGenerator(movieLanguage) {
