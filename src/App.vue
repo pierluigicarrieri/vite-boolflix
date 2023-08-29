@@ -53,7 +53,8 @@ export default {
 .info-container {
     opacity: 0;
     position: absolute;
-    inset: 0px
+    inset: 0px;
+    overflow-y: auto;
 }
 
 </style>

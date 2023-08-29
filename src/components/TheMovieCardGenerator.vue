@@ -47,7 +47,7 @@ export default {
                 star-size="15" read-only="true" :rating="`${starsSetter(parseInt(movie.vote_average))}`" 
                 ></StarRating>
             </div>
-            <div class="overview-container"></div>
+            <div class="overview-container">{{ movie.overview }}</div>
         </div>
     </div>
 

@@ -47,7 +47,7 @@ export default {
                 star-size="15" read-only="true" :rating="`${starsSetter(parseInt(series.vote_average))}`" 
                 ></StarRating>
             </div>
-            <div class="overview-container"></div>
+            <div class="overview-container">{{ series.overview }}</div>
         </div>
     </div>
 
