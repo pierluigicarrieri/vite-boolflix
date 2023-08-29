@@ -37,41 +37,23 @@ export default {
     <div class="card h-100 rounded-0">
         <img class="poster" :src="`${fetchImages(series.poster_path)}`" alt="">
         <div class="info-container">
-            <div id="title-container" class="card-text">{{ series.name }}</div>
-            <div id="original-title-container" class="card-text">{{ series.original_name }}</div>
-            <div id="language-container" class="card-text">
+            <div class="title-container card-text">{{ series.name }}</div>
+            <div class="original-title-container card-text">{{ series.original_name }}</div>
+            <div class="language-container card-text">
                 <img :src="`https://flagsapi.com/${flagGenerator(series.origin_country)}/flat/64.png`" :alt="`${series.origin_country}`">
             </div>  
-            <div id="vote-container" class="card-text">
+            <div class="vote-container card-text">
                 <StarRating 
                 star-size="15" read-only="true" :rating="`${starsSetter(parseInt(series.vote_average))}`" 
                 ></StarRating>
             </div>
+            <div class="overview-container"></div>
         </div>
     </div>
 
 </template>
 
 <style lang="scss" scoped>
-
-// .card {
-//     position: relative;
-// }
-// .poster {
-//     height: 100%;
-// }
-// .card:hover > .poster {
-//     opacity: 0;
-// }
-// .card:hover > .info-container {
-//     opacity: 1;
-// }
-
-// .info-container {
-//     opacity: 0;
-//     position: absolute;
-//     inset: 0px
-// }
 
 </style>
 

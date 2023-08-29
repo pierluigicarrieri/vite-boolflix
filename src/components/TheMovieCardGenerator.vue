@@ -37,16 +37,17 @@ export default {
     <div class="card h-100 rounded-0">
         <img class="poster" :src="`${fetchImages(movie.poster_path)}`" alt="">
         <div class="info-container">
-            <div id="title-container" class="card-text">{{ movie.title }}</div>
-            <div id="original-title-container" class="card-text">{{ movie.original_title }}</div>
-            <div id="language-container" class="card-text">
+            <div class="title-container card-text">{{ movie.title }}</div>
+            <div class="original-title-container card-text">{{ movie.original_title }}</div>
+            <div class="language-container card-text">
                 <img :src="`https://flagsapi.com/${flagGenerator(movie.original_language)}/flat/64.png`" :alt="`${movie.original_language}`">
             </div>  
-            <div id="vote-container" class="card-text">
+            <div class="vote-container card-text">
                 <StarRating 
                 star-size="15" read-only="true" :rating="`${starsSetter(parseInt(movie.vote_average))}`" 
                 ></StarRating>
             </div>
+            <div class="overview-container"></div>
         </div>
     </div>
 
