@@ -1,40 +1,40 @@
 <script>
 
-import {store, flagGenerator, starsSetter, fetchImages} from "../store.js";
-import StarRating from 'vue-star-rating'
+    import {store, flagGenerator, starsSetter, fetchImages} from "../store.js";
+    import StarRating from 'vue-star-rating'
 
-export default {
+    export default {
 
-    props: {
-        series: {
-            type: Object,
-            required: true,
-        }
-    },
+        props: {
+            series: {
+                type: Object,
+                required: true,
+            }
+        },
 
-    components: {
-        StarRating
-    },
+        components: {
+            StarRating
+        },
 
-    data() {
-        return {
-            store,
-        }
-    },
+        data() {
+            return {
+                store,
+            }
+        },
 
-    methods: {
-        flagGenerator,
-        starsSetter,
-        fetchImages
-    },
+        methods: {
+            flagGenerator,
+            starsSetter,
+            fetchImages
+        },
 
-}
+    }
 
 </script>
 
 <template>
 
-    <div class="card h-100 rounded-0">
+    <div class="card h-100 rounded-0 bg-dark text-light">
         <img class="poster" :src="`${fetchImages(series.poster_path)}`" alt="">
         <div class="info-container">
             <div class="title-container card-text">{{ series.name }}</div>

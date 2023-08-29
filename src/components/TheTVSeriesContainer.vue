@@ -1,31 +1,33 @@
 <script>
 
-import {store} from "../store.js";
-import TheTvSeriesCardGenerator from "./TheTVSeriesCardGenerator.vue"
+    import {store} from "../store.js";
+    import TheTvSeriesCardGenerator from "./TheTVSeriesCardGenerator.vue"
 
-export default {
+    export default {
 
-    components: {
-        TheTvSeriesCardGenerator,
-    },
+        components: {
+            TheTvSeriesCardGenerator,
+        },
 
-    data() {
-        return {
-            store,
+        data() {
+            return {
+                store,
+            }
         }
-    }
 
-}
+    }
 
 </script>
 
 <template>
 
     <div class="container">
-        <h2>TV SERIES</h2>
+        <h2 class="py-5 text-light">TV SERIES</h2>
         <div class="row row-cols-5 g-4">
             <div class="col" v-for="series in store.TVDataArray">
-                <TheTvSeriesCardGenerator :series="series"></TheTvSeriesCardGenerator>
+                <TheTvSeriesCardGenerator 
+                :series="series"
+                ></TheTvSeriesCardGenerator>
             </div>
         </div>
     </div>
