@@ -14,12 +14,19 @@ export function fetchData() {
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${store.APIKey}&query=${store.searchText}&language=it`;
     axios.get(url).then((response) => {
         store.dataArray = response.data.results;
-        console.log(store.dataArray)
+        console.log(store.dataArray);
     })
 
 }
 
 export function fetchMovieData() {
+
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=${store.APIKey}&query=${store.searchText}&language=it`;
+    axios.get(url).then((response) => {
+        store.dataArray = response.data.results;
+        console.log(store.dataArray);
+    })
+
 }
 
 export function fetchTvSeriesData() {
@@ -42,6 +49,8 @@ export function flagGenerator(movieLanguage) {
         movieLanguage = "cn";
     } else if (movieLanguage === "da") {
         movieLanguage = "dk";
+    } else if (movieLanguage === "ar") {
+        movieLanguage = "sa";
     }
     return movieLanguage.toUpperCase();
 
