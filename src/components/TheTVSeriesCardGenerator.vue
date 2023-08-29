@@ -35,8 +35,7 @@ export default {
 <template>
 
     <div class="card h-100 rounded-0">
-        <!-- <img :src="`https://image.tmdb.org/t/p/w154${series.poster_path}`" alt=""> -->
-        <img :src="`${fetchImages(series.poster_path)}`" alt="">
+        <img class="poster" :src="`${fetchImages(series.poster_path)}`" alt="">
         <div class="info-container">
             <div id="title-container" class="card-text">{{ series.name }}</div>
             <div id="original-title-container" class="card-text">{{ series.original_name }}</div>
@@ -54,6 +53,25 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+// .card {
+//     position: relative;
+// }
+// .poster {
+//     height: 100%;
+// }
+// .card:hover > .poster {
+//     opacity: 0;
+// }
+// .card:hover > .info-container {
+//     opacity: 1;
+// }
+
+// .info-container {
+//     opacity: 0;
+//     position: absolute;
+//     inset: 0px
+// }
 
 </style>
 

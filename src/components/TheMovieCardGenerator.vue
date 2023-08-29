@@ -35,8 +35,7 @@ export default {
 <template>
 
     <div class="card h-100 rounded-0">
-        <!-- <img :src="`https://image.tmdb.org/t/p/w154${movie.poster_path}`" alt=""> -->
-        <img :src="`${fetchImages(movie.poster_path)}`" alt="">
+        <img class="poster" :src="`${fetchImages(movie.poster_path)}`" alt="">
         <div class="info-container">
             <div id="title-container" class="card-text">{{ movie.title }}</div>
             <div id="original-title-container" class="card-text">{{ movie.original_title }}</div>

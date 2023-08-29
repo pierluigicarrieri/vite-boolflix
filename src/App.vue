@@ -37,4 +37,23 @@ export default {
 
 <style lang="scss">
 
+.card {
+    position: relative;
+}
+.poster {
+    height: 100%;
+}
+.card:hover > .poster {
+    opacity: 0;
+}
+.card:hover > .info-container {
+    opacity: 1;
+}
+
+.info-container {
+    opacity: 0;
+    position: absolute;
+    inset: 0px
+}
+
 </style>

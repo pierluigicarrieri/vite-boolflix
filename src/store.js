@@ -80,6 +80,6 @@ export function fetchImages(url) {
         return "/public/csaff-no-poster.jpg";
     }
 
-    return `https://image.tmdb.org/t/p/w154${url}`;
+    return `https://image.tmdb.org/t/p/w185${url}`;
 
 }
