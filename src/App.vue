@@ -1,10 +1,20 @@
 <script>
 
 import {store, fetchData, clearData, flagGenerator} from "./store.js";
+import TheHeader from "./components/TheHeader.vue";
+import TheMovieContainer from "./components/TheMovieContainer.vue";
+import TheTVSeriesContainer from "./components/TheTVSeriesContainer.vue";
+import TheFooter from "./components/TheFooter.vue";
 
 export default {
 
   components:{
+
+    TheHeader,
+    TheMovieContainer,
+    TheTVSeriesContainer,
+    TheFooter,
+
   },
 
   data() {
@@ -34,14 +44,7 @@ export default {
 
 <template>
 
-<div class="container">
-
-  <div class="input-group d-flex w-50">
-    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search"
-    v-model="store.searchText" @keyup.enter="fetchData">
-    <button class="btn btn-outline-success" @click="fetchData">Search</button>
-    <button class="btn btn-outline-danger" @click="clearData">Clear</button>
-  </div>
+  <TheHeader></TheHeader>
 
   <ul v-for="movie in store.movieDataArray">
     <li>
@@ -68,8 +71,6 @@ export default {
         </div>
     </li>
   </ul>
-
-</div>
 
 </template>
 
