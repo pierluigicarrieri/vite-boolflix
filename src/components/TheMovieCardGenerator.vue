@@ -33,17 +33,19 @@ export default {
 
 <template>
 
-    <div id="info-container" class="card h-100 rounded-0">
+    <div class="card h-100 rounded-0">
         <img :src="`https://image.tmdb.org/t/p/w154${movie.poster_path}`" alt="">
-        <div id="title-container" class="card-text">{{ movie.title }}</div>
-        <div id="original-title-container" class="card-text">{{ movie.original_title }}</div>
-        <div id="language-container" class="card-text">
-            <img :src="`https://flagsapi.com/${flagGenerator(movie.original_language)}/flat/64.png`" :alt="`${movie.original_language}`">
-        </div>  
-        <div id="vote-container" class="card-text">
-            <StarRating 
-            star-size="15" read-only="true" :rating="`${starsSetter(parseInt(movie.vote_average))}`" 
-            ></StarRating>
+        <div  id="info-container">
+            <div id="title-container" class="card-text">{{ movie.title }}</div>
+            <div id="original-title-container" class="card-text">{{ movie.original_title }}</div>
+            <div id="language-container" class="card-text">
+                <img :src="`https://flagsapi.com/${flagGenerator(movie.original_language)}/flat/64.png`" :alt="`${movie.original_language}`">
+            </div>  
+            <div id="vote-container" class="card-text">
+                <StarRating 
+                star-size="15" read-only="true" :rating="`${starsSetter(parseInt(movie.vote_average))}`" 
+                ></StarRating>
+            </div>
         </div>
     </div>
 
