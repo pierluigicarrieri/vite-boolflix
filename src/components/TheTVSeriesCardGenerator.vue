@@ -5,7 +5,10 @@ import {store, flagGenerator} from "../store.js";
 export default {
 
     props: {
-        series: Object
+        series: {
+            type: Object,
+            required: true,
+        }
     },
 
     data() {
