@@ -41,6 +41,7 @@ export function clearData() {
 
     store.searchText = "";
     store.movieDataArray = [];
+    store.TVDataArray = [];
 
 }
 
