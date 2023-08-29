@@ -1,6 +1,7 @@
 <script>
 
-import {store, flagGenerator} from "../store.js";
+import {store, flagGenerator, starsSetter} from "../store.js";
+import StarRating from 'vue-star-rating'
 
 export default {
 
@@ -11,6 +12,10 @@ export default {
         }
     },
 
+    components: {
+        StarRating
+    },
+
     data() {
         return {
             store,
@@ -18,7 +23,8 @@ export default {
     },
 
     methods: {
-        flagGenerator
+        flagGenerator,
+        starsSetter
     },
 
 }
@@ -34,6 +40,11 @@ export default {
             <img :src="`https://flagsapi.com/${flagGenerator(series.origin_country)}/flat/64.png`" :alt="`${series.origin_country}`">
         </div>  
         <div id="vote-container" class="card-text">{{ series.vote_average }}</div>
+        <div id="vote-container" class="card-text">
+            <StarRating 
+            star-size="15" read-only="true" :rating="`${starsSetter(parseInt(series.vote_average))}`" 
+            ></StarRating>
+        </div>
     </div>
 
 </template>
@@ -41,3 +52,5 @@ export default {
 <style lang="scss" scoped>
 
 </style>
+
+<!-- https://github.com/craigh411/vue-star-rating -->

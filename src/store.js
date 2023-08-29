@@ -67,3 +67,9 @@ export function flagGenerator(movieLanguage) {
     return movieLanguage.toUpperCase();
 
 }
+
+export function starsSetter (number) {
+
+    return Math.ceil(number/2)
+
+}
