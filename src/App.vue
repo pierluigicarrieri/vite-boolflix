@@ -8,7 +8,7 @@ import TheFooter from "./components/TheFooter.vue";
 
 export default {
 
-  components:{
+  components: {
 
     TheHeader,
     TheMovieContainer,
