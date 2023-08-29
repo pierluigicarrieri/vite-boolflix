@@ -1,6 +1,6 @@
 <script>
 
-import {store, fetchData, clearData, flagGenerator} from "./store.js";
+import {store, flagGenerator} from "./store.js";
 import TheHeader from "./components/TheHeader.vue";
 import TheMovieContainer from "./components/TheMovieContainer.vue";
 import TheTVSeriesContainer from "./components/TheTVSeriesContainer.vue";
@@ -29,8 +29,6 @@ export default {
 
   methods: {
 
-    fetchData,
-    clearData,
     flagGenerator,
 
   },
