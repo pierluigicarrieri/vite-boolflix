@@ -73,3 +73,13 @@ export function starsSetter (number) {
     return Math.ceil(number/2)
 
 }
+
+export function fetchImages(url) {
+
+    if (url === null) {
+        return "/public/csaff-no-poster.jpg";
+    }
+
+    return `https://image.tmdb.org/t/p/w154${url}`;
+
+}

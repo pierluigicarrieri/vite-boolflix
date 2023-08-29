@@ -1,6 +1,6 @@
 <script>
 
-import {store, flagGenerator, starsSetter} from "../store.js";
+import {store, flagGenerator, starsSetter, fetchImages} from "../store.js";
 import StarRating from 'vue-star-rating'
 
 export default {
@@ -24,7 +24,8 @@ export default {
 
     methods: {
         flagGenerator,
-        starsSetter
+        starsSetter,
+        fetchImages
     },
 
 }
@@ -34,8 +35,9 @@ export default {
 <template>
 
     <div class="card h-100 rounded-0">
-        <img :src="`https://image.tmdb.org/t/p/w154${movie.poster_path}`" alt="">
-        <div  id="info-container">
+        <!-- <img :src="`https://image.tmdb.org/t/p/w154${movie.poster_path}`" alt=""> -->
+        <img :src="`${fetchImages(movie.poster_path)}`" alt="">
+        <div class="info-container">
             <div id="title-container" class="card-text">{{ movie.title }}</div>
             <div id="original-title-container" class="card-text">{{ movie.original_title }}</div>
             <div id="language-container" class="card-text">
