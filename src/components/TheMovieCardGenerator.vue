@@ -43,7 +43,7 @@
     for the above functions) dynamically generated thanks to "movie" prop (v-for cycle in 
     father component) -->
 
-    <div class="card h-100 rounded-0 bg-dark text-light"">
+    <div class="card h-100 rounded-0 bg-dark text-light">
         <img class="poster" :src="`${fetchImages(movie.poster_path)}`" alt="">
         <div class="info-container p-2">
             <div class="title-container card-text py-1">Titolo: {{ movie.title }}</div>
