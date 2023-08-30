@@ -80,6 +80,8 @@ export function fetchImages(url) {
         return "/public/csaff-no-poster.jpg";
     }
 
-    return `https://image.tmdb.org/t/p/w185${url}`;
+    return `https://image.tmdb.org/t/p/w780${url}`;
+
+    // https://www.themoviedb.org/talk/53c11d4ec3a3684cf4006400
 
 }
