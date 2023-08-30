@@ -37,8 +37,16 @@ export default {
 
 <style lang="scss" scoped>
 
-h1 {
-    font-size: 5rem;
+header {
+
+    height: 15vh;
+
+    h1 {
+        font-size: 5rem;
+    }
+
 }
+
+
 
 </style>

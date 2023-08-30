@@ -36,7 +36,12 @@
 <style lang="scss">
 
 body {
-  min-height: 100vh;
+  height: 100vh;
+
+  main {
+    background-image: url("/public/background-img.jpg");
+    min-height: 70vh;
+  }
 
   h2 {
     font-size: 3rem;
