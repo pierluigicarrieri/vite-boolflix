@@ -40,7 +40,7 @@
             <div class="title-container card-text py-1">Titolo: {{ movie.title }}</div>
             <div class="original-title-container card-text py-1">Titolo originale: {{ movie.original_title }}</div>
             <div class="language-container card-text py-1">Lingua: 
-                <img :src="`https://flagsapi.com/${flagGenerator(movie.original_language)}/flat/64.png`" :alt="`${movie.original_language}`">
+                <img :src="`https://flagsapi.com/${flagGenerator(movie.original_language)}/flat/48.png`" :alt="`${movie.original_language}`">
             </div>  
             <div class="vote-container card-text py-1">Voto:
                 <StarRating 

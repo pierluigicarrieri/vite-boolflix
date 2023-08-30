@@ -40,7 +40,7 @@
             <div class="title-container card-text py-1">Titolo: {{ series.name }}</div>
             <div class="original-title-container card-text py-1">Titolo originale: {{ series.original_name }}</div>
             <div class="language-container card-text py-1">Lingua: 
-                <img :src="`https://flagsapi.com/${flagGenerator(series.origin_country)}/flat/64.png`" :alt="`${series.origin_country}`">
+                <img :src="`https://flagsapi.com/${flagGenerator(series.origin_country)}/flat/48.png`" :alt="`${series.origin_country}`">
             </div>  
             <div class="vote-container card-text py-1">Voto: 
                 <StarRating 
