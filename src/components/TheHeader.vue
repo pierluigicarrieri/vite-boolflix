@@ -1,5 +1,7 @@
 <script>
 
+// Using searchText form store, fetchData() and clearData() functions
+
 import {store, fetchData, clearData} from "../store.js";
 
 export default {
@@ -20,6 +22,10 @@ export default {
 </script>
 
 <template>
+
+    <!-- Header vith main title, searchbar to pass "searchText" to "fetchData()", 
+    "fetcData()" on click on search button and keyup-enter in searchbar, "clearData()" 
+    on click on clear button -->
 
     <header class="py-4 bg-dark">
         <div class="container d-flex justify-content-between align-items-center">

@@ -1,5 +1,7 @@
 <script>
 
+  // 4 components, 2 different components for movies/Tv series
+
   import TheHeader from "./components/TheHeader.vue";
   import TheMovieContainer from "./components/TheMovieContainer.vue";
   import TheTVSeriesContainer from "./components/TheTVSeriesContainer.vue";
@@ -67,7 +69,5 @@ body {
       overflow-y: auto;
   }
 }
-
-
 
 </style>

@@ -1,5 +1,8 @@
 <script>
 
+/* Using "flagGenerator()", "starsSetter()", "fetchImages()" from store.
+1 component to manage stars rating (documentation below) */
+
     import {store, flagGenerator, starsSetter, fetchImages} from "../store.js";
     import StarRating from 'vue-star-rating'
 
@@ -14,6 +17,7 @@
 
         components: {
             StarRating
+            // https://github.com/craigh411/vue-star-rating
         },
 
         data() {
@@ -33,6 +37,11 @@
 </script>
 
 <template>
+
+    <!-- Using "fetchImages()" to get poster, "flagGenerator()" to get language flag.
+    Title, original title, original language, vote and overview are (as the data/arguments 
+    for the above functions) dynamically generated thanks to "movie" prop (v-for cycle in 
+    father component) -->
 
     <div class="card h-100 rounded-0 bg-dark text-light">
         <img class="poster" :src="`${fetchImages(movie.poster_path)}`" alt="">
@@ -56,7 +65,3 @@
 <style lang="scss" scoped>
 
 </style>
-
-<!-- https://www.themoviedb.org/talk/53c11d4ec3a3684cf4006400 -->
-
-<!-- https://github.com/craigh411/vue-star-rating -->

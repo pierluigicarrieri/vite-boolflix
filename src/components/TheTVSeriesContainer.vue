@@ -1,5 +1,7 @@
 <script>
 
+// Using "TVDataArray" form store, 1 component to generate cards dynamically
+
     import {store} from "../store.js";
     import TheTvSeriesCardGenerator from "./TheTVSeriesCardGenerator.vue"
 
@@ -20,6 +22,9 @@
 </script>
 
 <template>
+
+    <!-- Secondary title for Tv Series, v-for cycle on "TVDataArray", 
+        "series" passed as prop to component -->
 
     <div class="container pb-5">
         <h2 class="py-5 text-light">TV SERIES</h2>
