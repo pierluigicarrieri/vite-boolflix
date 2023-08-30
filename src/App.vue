@@ -57,6 +57,7 @@ body {
   }
   .card:hover > .poster {
       opacity: 0;
+      transition: opacity 0.3s;
   }
   .card:hover > .info-container {
       opacity: 1;
