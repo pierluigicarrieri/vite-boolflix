@@ -66,6 +66,8 @@ export function flagGenerator(movieLanguage) {
     }
     return movieLanguage.toUpperCase();
 
+    // https://flagsapi.com/#body
+
 }
 
 export function starsSetter (number) {

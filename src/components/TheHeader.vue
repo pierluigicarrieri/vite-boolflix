@@ -21,7 +21,7 @@ export default {
 
 <template>
 
-    <header class="py-5 bg-dark">
+    <header class="py-4 bg-dark">
         <div class="container d-flex justify-content-between align-items-center">
             <h1 class="text-danger">Boolflix</h1>
             <div class="input-group d-flex w-50">
